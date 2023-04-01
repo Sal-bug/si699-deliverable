@@ -635,14 +635,17 @@ progress {
   }
 }
 .row {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 5rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-right: calc(var(--bs-gutter-x) / -1);
   margin-left: calc(var(--bs-gutter-x) / -2);
+  align-items: center;
+  justify-content: center;
 }
+
 .row > * {
   flex-shrink: 0;
   width: 100%;
@@ -11084,22 +11087,28 @@ header.masthead .masthead-heading {
   position: relative;
   padding: 0;
   list-style: none;
+  border-left: solid #e9ecef 2px;
+  margin-bottom: 200px;
 }
-.timeline:before {
+
+ /* .timeline:before {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 40px;
-  width: 2px;
   margin-left: -1.5px;
+  width: 2px;
   content: "";
   background-color: #e9ecef;
-}
+} */
+
 .timeline > li {
   position: relative;
   min-height: 50px;
   margin-bottom: 50px;
-}
+  /* background-color: #0aa2c0; */
+} 
+
 .timeline > li:after, .timeline > li:before {
   display: table;
   content: " ";
@@ -11107,13 +11116,16 @@ header.masthead .masthead-heading {
 .timeline > li:after {
   clear: both;
 }
+
 .timeline > li .timeline-panel {
-  position: relative;
-  float: right;
+  position: absolute;
+  float: left;
   width: 100%;
   padding: 0 20px 0 100px;
   text-align: left;
+  top: 30px;
 }
+
 .timeline > li .timeline-panel:before {
   right: auto;
   left: -15px;
@@ -11126,10 +11138,10 @@ header.masthead .masthead-heading {
   border-right-width: 14px;
   border-left-width: 0;
 }
+
 .timeline > li .timeline-image {
-  position: absolute;
+  /* position: absolute; */
   z-index: 100;
-  left: 0;
   width: 80px;
   height: 80px;
   margin-left: 0;
@@ -11144,7 +11156,7 @@ header.masthead .masthead-heading {
   line-height: 14px;
   margin-top: 12px;
 }
-.timeline > li.timeline-inverted > .timeline-panel {
+/* .timeline > li.timeline-inverted > .timeline-panel {
   float: right;
   padding: 0 20px 0 100px;
   text-align: left;
@@ -11159,8 +11171,8 @@ header.masthead .masthead-heading {
   right: auto;
   left: -14px;
   border-right-width: 14px;
-  border-left-width: 0;
-}
+  border-left-width: 0; 
+}*/
 .timeline > li:last-child {
   margin-bottom: 0;
 }
@@ -11188,7 +11200,7 @@ header.masthead .masthead-heading {
     float: left;
     width: 41%;
     padding: 0 20px 20px 30px;
-    text-align: right;
+    text-align: left;
   }
   .timeline > li .timeline-image {
     left: 50%;
@@ -11327,15 +11339,92 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .performance-row {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .performance-row h3 {
-  margin: 20px;
-  padding: 20px;
-  font-size: 20px;
+  margin: 10px;
+  margin-top: 0px;
+  padding: 10px;
+  padding-top: 0px;
+  font-size: 24px;
+  font-weight: bold; 
 }
 
 .performance-column {
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 50px;
+  font-size: 18px;
+}
+
+.portfolio-link .img-fluid {
+  width: 850px;
+  height: 210px;
+}
+
+.modal-body .img-fluid {
+  width: 520px;
+  height: 250px;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+iframe {
+  display: block;
+  margin: auto;
 }
