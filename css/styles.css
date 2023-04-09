@@ -11380,17 +11380,18 @@ input {
   border: 1px solid transparent;
   background-color: #f1f1f1;
   padding: 10px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 input[type=text] {
   background-color: #f1f1f1;
   width: 100%;
+  padding: 0.6rem 5rem 0.7rem 1rem;
+  margin-right: 10rem;
 }
 
-input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
+#submit-button {
+  padding: 0.5rem 2rem;
   cursor: pointer;
 }
 
@@ -11407,6 +11408,7 @@ input[type=submit] {
 }
 
 .autocomplete-items div {
+  text-align: left;
   padding: 10px;
   cursor: pointer;
   background-color: #fff; 
@@ -11427,4 +11429,21 @@ input[type=submit] {
 iframe {
   display: block;
   margin: auto;
+}
+
+.text-center form {
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  margin-left: 3rem;
+}
+
+.timeline-heading {
+  margin-bottom: 1rem;
+}
+
+.timeline-panel{
+  margin-left: 1rem;
 }
